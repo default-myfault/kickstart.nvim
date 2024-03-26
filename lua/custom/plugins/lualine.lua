@@ -1,12 +1,9 @@
 local config = function()
-  local theme = require 'lualine.themes.onedark'
+  local theme = require 'lualine.themes.molokai'
 
-  -- set bg transparency in all modes
+  local b_bg = '#444444'
+  theme.normal.b = { fg = '#ffffff', bg = b_bg }
   theme.normal.c.bg = nil
-  --theme.insert.c.bg = nil
-  --theme.visual.c.bg = nil
-  --theme.replace.c.bg = nil
-  ----	theme.command.c.bg = nil
 
   require('lualine').setup {
     options = {
@@ -14,11 +11,18 @@ local config = function()
       theme = theme,
       globalstatus = true,
     },
-    tabline = {},
     sections = {
       lualine_a = { 'mode' },
       lualine_b = { 'branch', 'diff', 'diagnostics' },
-      lualine_c = { 'filename', 'buffers' },
+      lualine_c = {
+        {
+          'buffers',
+          buffers_color = {
+            active = { fg = theme.normal.a.bg, bg = nil },
+            inactive = { fg = '#dddddd', bg = nil },
+          },
+        },
+      },
       lualine_x = { 'encoding', 'filetype' },
       lualine_y = {
         'progress',
