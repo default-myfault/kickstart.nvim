@@ -16,16 +16,11 @@ return {
         ['@constructor'] = {
           fg = '#ffffff',
         },
-        -- ['@storageclass'] = {
-        --   fg = '#ffffff',
-        -- },
-        --   ['@text.environment.name'] = {
-        --     fg = '#ffffff',
-        --   },
-        -- Typedef = {
-        --   fg = '#ffffff',
-        -- },
-        -- },
+        ['MatchParen'] = {
+          bg = '#dd00dd',
+          fg = '#dddddd',
+          cterm = 'bold',
+        },
       },
     }
   end,
