@@ -88,7 +88,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.g.inlay_hints_visible = true
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
 
@@ -510,6 +510,14 @@ require('lazy').setup({
               callback = vim.lsp.buf.clear_references,
             })
           end
+
+          --makes diagnostics update while in INSERT mode
+          -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+          --   virtual_text = true,
+          --   signs = true,
+          --   underline = true,
+          --   update_in_insert = true,
+          -- })
         end,
       })
 

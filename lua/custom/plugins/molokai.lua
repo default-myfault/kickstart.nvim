@@ -13,13 +13,22 @@ return {
         base4 = '#444444',
       },
       custom_hlgroups = {
+        ['Structure'] = {
+          fg = '#eeeeee',
+        },
+        ['@type'] = {
+          fg = '#eeeeee',
+        },
+        ['@constant'] = {
+          fg = '#ffa500',
+        },
         ['@constructor'] = {
-          fg = '#ffffff',
+          fg = '#eeeeee',
         },
         ['MatchParen'] = {
-          bg = '#dd00dd',
-          fg = '#dddddd',
+          fg = '#bb33bb',
           cterm = 'bold',
+          gui = 'bold',
         },
       },
     }
