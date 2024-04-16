@@ -25,7 +25,10 @@ local config = function()
       },
       lualine_x = { 'encoding', 'filetype' },
       lualine_y = {
-        'progress',
+        {
+          'datetime',
+          style = '%H:%M',
+        },
       },
       lualine_z = { 'location' },
     },

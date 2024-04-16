@@ -10,7 +10,7 @@ return {
         base1 = '#111111',
         base2 = '#0D1011',
         base3 = '#333333',
-        base4 = '#444444',
+        base4 = '#555555',
       },
       custom_hlgroups = {
         ['Structure'] = {
